@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="row" style="padding:1em; font-size:3em">
+    <div class="col-md-8">
+        Name
+    </div>
+    <div class="col-md-4">
+        Quantity - Size
+    </div>
+
+</div>
+
+{% for i in items %}
+<!-- 0 = name   1 = qty -->
+<hr>
+<div class="row" style="padding:1em; font-size:3em">
+    <div class="col-md-4">
+        {{i[0]}}
+    </div>
+    <div class="col-md-4">
+        <a href="edit-{{i[0]}}">edit</a> -
+        <a href="delete-{{i[0]}}" style="color:crimson">delete</a>
+    </div>
+    <div class="col-md-1">
+        <p id="qty">{{i[1]}}</p>
+    </div>
+    <div class="col-md-1">
+        <p id="qty">{{i[2]}}</p>
+    </div>
+    <div class="col-md-2">
+        <a href="add-{{i[0]}}"><div class="btn btn-success btn-block btn-lg" id="add"> + </div></a>
+        <a href="sub-{{i[0]}}"><div class="btn btn-danger btn-block btn-lg" id="sub"> - </div></a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+        <ul style="padding: 3em;">
+            {% if task == 'create' %} <form action="{{ url_for('create_item') }}" method="POST"> {% endif %}
+            {% if task == 'edit' %} <form action="{{ url_for('edit_item', item=name) }}" method="POST"> {% endif %}
+                <div class="form-group">
+                    <label for="nameinput">Name</label>
+                    <input type="text" class="form-control" id="nameinput" name="nameinput" placeholder="Enter Name" value="{{name}}">
+                </div>
+                <div class="form-group">
+                    <label for="usernameinput">Quantity</label>
+                    <input type="text" class="form-control" id="qtyinput" name="qtyinput" placeholder="Enter Quantity" value="{{quantity}}">
+                </div>
+                <div class="form-group">
+                    <label for="sizeinput">Size</label>
+                    <input type="text" class="form-control" id="sizeinput" name="sizeinput" placeholder="Enter Size" value="{{size}}">
+                    <button type="submit" class="btn btn-primary" style="margin-top: 0.5em">Submit</button>
+                </div>
+            </form>
+        </ul>
+    </div>
+    <div class="col-md-5"></div>
+</div>
+{% endblock %}
