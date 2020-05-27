@@ -1,2 +1,2 @@
-# dhs-code-club
-Just a repository for DHS programming club
+# Inventory Manager
+A manager for inventory.
