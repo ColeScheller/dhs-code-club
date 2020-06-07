@@ -37,4 +37,4 @@ If it worked you should now see a cool little page saying hey apache worked.
 9. Restart the flask server (step 3)
 10. If all went well you should be able to go to any browser on the same network and type in the address to the raspberry pi and see the inventory manager
 
-Good luch & have fun
+Good luck & have fun
